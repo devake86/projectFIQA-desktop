@@ -1,0 +1,76 @@
+# projectFIQA (Desktop)
+
+A Java-based quiz application built for learning and preparing for the IHK final exam (AP1), developed with JavaFX and JSON-based question handling.
+
+---
+
+## Project Overview
+
+This project was created as an additional learning tool during retraining as a *Fachinformatiker*.
+
+Motivation:
+- Java and OOP concepts were not deeply covered in the official learning fields
+- Need for an additional, more interactive way of learning
+- Traditional studying (e.g. books while commuting) felt inefficient and slow
+
+Solution:
+- A desktop quiz application for Windows
+- Designed to run in a small “snap” window next to other tasks
+- Allows easy repetition and quick learning sessions
+
+A matching Android version was developed with similar structure and logic to simplify maintenance and further development.
+
+---
+
+## Current Status
+
+- Working “20 Questions Mode”
+- Randomized (shuffled) selection of 20 questions from a chosen learning field
+- Question format: True/False or 1 out of 4
+
+---
+
+## Goals
+
+### Minimum Goals
+
+- Implement an AP1 mode:
+  - Combines all topics from learning fields 1–6
+  - Selects one question from each subtopic
+  - Simulates a realistic exam round
+
+- Add repetition mode:
+  - 20 Questions Mode for individual learning fields
+
+- Integrate user feedback from testing phase
+
+---
+
+### Optional Goals
+
+- AP2 mode (learning fields 1–12)
+  - intended for both FIAE and FISI tracks
+  - only if time permits (significantly higher workload)
+
+- Possible implementation of multiple choice questions depending on user feedback
+
+---
+
+## Learning Objectives
+
+- Improve understanding of OOP
+- Deepen Java knowledge
+- Learn JavaFX GUI development
+- Work with JSON data structures
+- Build a practical, usable learning tool for real exam preparation
+
+---
+
+## Changelog
+
+### v0.1-prototype (desktop)
+
+- Implemented core quiz classes
+- Created JSON structure and loader
+- Implemented quiz logic in engine
+- Basic console output for testing in main class
