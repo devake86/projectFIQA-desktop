@@ -68,6 +68,20 @@ A matching Android version was developed with similar structure and logic to sim
 
 ## Changelog
 
+### v1.0-beta (desktop & android)
+
+- Implemented GUI versions for Desktop (JavaFX) and Android
+- Android version already separates menu and quiz flow
+- Created Windows desktop build (.exe)
+- Created Android debug build (.apk)
+
+User testing:
+- Tested with classmates (learning field 9 questions)
+- Overall positive feedback
+- UI improvements requested
+
+---
+
 ### v0.1-prototype (desktop)
 
 - Implemented core quiz classes
