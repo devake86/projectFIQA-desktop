@@ -1,4 +1,4 @@
-// Main bleibt erhalten für debugging mit der Konsole; App startet mit JavaFX in QuizView.
+// Main bleibt erhalten für Funktionstest / debugging mit der Konsole; App startet mit JavaFX in QuizView bzw. MainView wenn ausgelagert.
 
 package app;
 

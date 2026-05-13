@@ -68,6 +68,25 @@ A matching Android version was developed with similar structure and logic to sim
 
 ## Changelog
 
+### v1.0-dev (desktop & android)
+
+Priority (based on user feedback):
+- Immediate feedback on answer buttons (green/red)
+- Remove extra result screen after answering
+- Optional review of incorrectly answered questions after a round
+
+General:
+- Refactor desktop version to match Android structure
+- Separate main menu from quiz flow for better parity
+- Implement AP1 mode with JSON-based question logic
+- Add at least 30 high-quality exam-oriented questions per subtopic (LF1–LF6)
+- Add repetition mode for individual learning fields
+- Track correctly answered questions using IDs and timestamps
+- Reintroduce questions into the pool after 2–3 days (learning curve)
+- Consider adding statistics / correctness percentage display
+
+---
+
 ### v1.0-beta (desktop & android)
 
 - Implemented GUI versions for Desktop (JavaFX) and Android

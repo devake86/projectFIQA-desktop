@@ -22,7 +22,7 @@
     "id": "LF00-0003",
     "question": "Hat Frage LF00-0003 vier Antwortmöglichkeiten und ein Bild?",
     "answers": [
-      {"text": "A", "correct": false},
+      {"text": "AAAAA AAAAA AAAAA AAAAA AAAAA AAAAA", "correct": false},
       {"text": "B", "correct": false},
       {"text": "C", "correct": false},
       {"text": "Nein", "correct": true}

@@ -125,20 +125,20 @@ public class QuizView extends Application {
 
         // Links Frage x/y
         questionCounterLabel = new Label();
-        questionCounterLabel.setStyle("-fx-font-size: 14px");
+        questionCounterLabel.setStyle("-fx-font-size: 12px");
 
         // Rechts Frage ID
         questionIdLabel = new Label("v1");
-        questionIdLabel.setStyle("-fx-font-size: 14px");
+        questionIdLabel.setStyle("-fx-font-size: 12px");
 
         // Spacer um rechtes Label nach ganz rechts zu schieben.
-        Region spacer = new Region();
-        HBox.setHgrow(spacer, Priority.ALWAYS);
+        Region spacerStatusBar = new Region();
+        HBox.setHgrow(spacerStatusBar, Priority.ALWAYS);
 
         // Status-Bar mit Frage x/y, Spacer und Frage ID
         statusBar.getChildren().addAll(
                 questionCounterLabel,
-                spacer,
+                spacerStatusBar,
                 questionIdLabel
         );
 
@@ -181,7 +181,7 @@ public class QuizView extends Application {
         interactionPane = new VBox(8);
         interactionPane.setMinHeight(280);
         interactionPane.setPrefHeight(280);
-        interactionPane.setAlignment(Pos.CENTER);
+        interactionPane.setAlignment(Pos.TOP_CENTER);
         interactionPane.setPadding(new Insets(14, 0, 0, 0));
 
         // Action Button zum Navigieren. Unsichtbar bis Antwort gewählt
@@ -347,7 +347,7 @@ public class QuizView extends Application {
         rootLayout.setCenter(startPane);
 
         // Scene aus Root-Layout erzeugen mit Breite und Höhe
-        Scene scene = new Scene(rootLayout, 620, 800);
+        Scene scene = new Scene(rootLayout, 620, 820);
 
         // "Dark-Theme" androidDark.css einbinden
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/css/androidDark.css")).toExternalForm());
@@ -413,7 +413,7 @@ public class QuizView extends Application {
         questionLabel.setPrefWidth(SET_WIDTH);
         questionLabel.setAlignment(Pos.CENTER);
         questionLabel.setStyle(
-                "-fx-font-size: 18px;" +
+                "-fx-font-size: 20px;" +
                 "-fx-font-weight: bold;"
         );
 
@@ -517,20 +517,60 @@ public class QuizView extends Application {
         Label resultLabel = new Label(
                 correct ? "+ RICHTIG +" : "- FALSCH -"
         );
-
+        // Bewertung Style
         resultLabel.setStyle(
-                "-fx-font-size: 24px;" +
+                "-fx-font-size: 20px;" +
                 "-fx-font-weight: bold;"
         );
 
+        resultLabel.setAlignment(Pos.TOP_CENTER);
+        resultLabel.setTextAlignment(TextAlignment.CENTER);
+
+
+
+        // Wenn Antwort falsch hole richtige Antwort
+        Label correctAnswerLabel = new Label(
+                correct ? "\n" : "Richtige Antwort:\n" + engine.getCurrentQuestion().getCorrectAnswerText()
+        );
+
+
+        correctAnswerLabel.setStyle(
+                "-fx-font-size: 16px;" +
+                "-fx-font-weight: bold"
+        );
+
+        // Zeilenumbruch wenn Text zu lang
+        correctAnswerLabel.setWrapText(true);
+
+        // Text zentrieren
+        correctAnswerLabel.setAlignment(Pos.TOP_CENTER);
+        correctAnswerLabel.setTextAlignment(TextAlignment.CENTER);
+
         // Erklärung
         Label explanation = new Label(
-                engine.getCurrentQuestion().getExplanation()
+                "Erklärung:\n" + engine.getCurrentQuestion().getExplanation()
+        );
+
+        explanation.setStyle(
+                "-fx-font-size: 12px;" +
+                "-fx-font-weight: bold"
         );
 
         explanation.setWrapText(true);
+        explanation.setAlignment(Pos.TOP_CENTER);
+        explanation.setTextAlignment(TextAlignment.CENTER);
 
-        interactionPane.getChildren().addAll(resultLabel, explanation);
+        // Spacer zwischen Textelementen.
+        Region spacerResult = new Region();
+        VBox.setVgrow(spacerResult, Priority.ALWAYS);
+
+        Region spacerCorrectAnswer = new Region();
+        VBox.setVgrow(spacerCorrectAnswer, Priority.ALWAYS);
+
+        Region spacerExplanation = new Region();
+        VBox.setVgrow(spacerExplanation, Priority.ALWAYS);
+
+        interactionPane.getChildren().addAll(resultLabel, spacerResult, correctAnswerLabel, spacerCorrectAnswer, explanation, spacerExplanation);
 
     }
 

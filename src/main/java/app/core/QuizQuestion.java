@@ -48,6 +48,24 @@ public class QuizQuestion {
         return explanation;
     }
 
+    public String getCorrectAnswerText(){
+
+        // Für jede Antwort in Antworten
+        for (QuizAnswer answer : this.answers) {
+
+            // Wenn Antwort richtig
+            if (answer.isCorrect()) {
+
+                // Gib Text zurück
+                return answer.getText();
+            }
+
+        }
+
+        // Rückgabe wenn keine Antwort der Antwortliste richtig (true) ist
+        return "Richtige Antwort wurde nicht gefunden. Frage mit ID " + this.id + " scheint fehlerhaft zu sein. ";
+    }
+
 
 
 }
