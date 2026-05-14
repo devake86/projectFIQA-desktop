@@ -2,6 +2,27 @@
 
 A Java-based quiz application built for learning and preparing for the IHK final exam (AP1), developed with JavaFX and JSON-based question handling.
 
+For a runnable example (.exe), see the **v1.0-beta release** in the Releases section.
+
+---
+
+## Screenshot
+
+Preview of the quiz interaction:
+
+![Quiz Loop](images/screenshot_quiz_loop_desktop_beta.png)
+
+*Example quiz interaction including answer selection and evaluation (v1.0-beta)*
+
+---
+
+## Status
+Current version: v1.0-dev
+
+Last stable release: v1.0-beta
+
+Designed for Windows (.exe).
+
 ---
 
 ## Project Overview
@@ -27,6 +48,8 @@ A matching Android version was developed with similar structure and logic to sim
 - Working “20 Questions Mode”
 - Randomized (shuffled) selection of 20 questions from a chosen learning field
 - Question format: True/False or 1 out of 4
+- Includes an answer confirmation step to prevent accidental selections and improve usability.
+- The desktop version uses a custom CSS styling to visually match the Android dark mode design.
 
 ---
 
@@ -74,6 +97,9 @@ Priority (based on user feedback):
 - Immediate feedback on answer buttons (green/red)
 - Remove extra result screen after answering
 - Optional review of incorrectly answered questions after a round
+
+Design decisions:
+- Kept answer confirmation button to prevent accidental selections (based on user feedback)
 
 General:
 - Refactor desktop version to match Android structure
