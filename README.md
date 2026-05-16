@@ -23,6 +23,10 @@ Last stable release: v1.0-beta
 
 Designed for Windows (.exe).
 
+To run locally:
+- Requires JDK 21 (or compatible)
+- Run with `./gradlew run`
+
 ---
 
 ## Project Overview
@@ -92,6 +96,12 @@ A matching Android version was developed with similar structure and logic to sim
 ## Changelog
 
 ### v1.0-dev (desktop & android)
+
+IMPLEMENTED:
+
+- Gradle as build tool to ensure consistency with the Android Port
+
+TODO:
 
 Priority (based on user feedback):
 - Immediate feedback on answer buttons (green/red)
